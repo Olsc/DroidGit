@@ -38,12 +38,12 @@
 	<string name="no_permissions">没有权限</string>
 	<string name="permissions">权限</string>
 	<string name="edit">编辑</string>
-	<string name="activate">激活</string>
-	<string name="deactivate">停用</string>
+	<string name="activate">公开</string>
+	<string name="deactivate">归档</string>
 	<string name="delete">删除</string>
 	<string name="repository_details">代码库详情</string>
 	<string name="no_users">没有用户</string>
-	<string name="add_repository_activate">激活代码库</string>
+	<string name="add_repository_activate">公开</string>
 	<string name="server_settings">服务器设置</string>
 	<string name="general_settings">常规设置</string>
 	<string name="eula">
@@ -204,13 +204,18 @@
     <string name="language_settings">语言设置</string>
     <string name="choose_language">选择语言</string>
     <string name="language_default">系统默认</string>
-    <string name="language_en">英语 (English)</string>
+    <string name="language_en">英语 (Default)</string>
+    <string name="language_en_us">英语 (US)</string>
     <string name="language_zh">中文</string>
     <string name="language_ja">日语 (Japanese)</string>
     <string name="language_ko">韩语 (Korean)</string>
     <string name="language_ru">俄语 (Russian)</string>
     <string name="language_fr">法语 (French)</string>
     <string name="language_es">西班牙语 (Spanish)</string>
+    <string name="language_ko_kp">朝鲜语 (Korean-KP)</string>
+    <string name="language_it">意大利语 (Italian)</string>
+    <string name="language_de">德语 (German)</string>
+    <string name="language_ar">阿拉伯语 (Arabic)</string>
 
     <string name="error_opening_paypal">无法打开 PayPal</string>
     <string name="server_running_no_network">服务运行中 - 无网络</string>
@@ -225,4 +230,36 @@
     <string name="repository_updated">代码库已更新</string>
     <string name="repository_created">代码库已创建</string>
     <string name="error_occurred">发生错误: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>

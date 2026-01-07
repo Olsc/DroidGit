@@ -38,12 +38,12 @@
 	<string name="no_permissions">Sin permisos</string>
 	<string name="permissions">Permisos</string>
 	<string name="edit">Editar</string>
-	<string name="activate">Activar</string>
-	<string name="deactivate">Desactivar</string>
+	<string name="activate">Público</string>
+	<string name="deactivate">Archivar</string>
 	<string name="delete">Eliminar</string>
 	<string name="repository_details">Detalles del repositorio</string>
 	<string name="no_users">Sin usuarios</string>
-	<string name="add_repository_activate">Activar repositorio</string>
+	<string name="add_repository_activate">Público</string>
 	<string name="server_settings">Ajustes del servidor</string>
 	<string name="general_settings">Ajustes generales</string>
 	<string name="eula">
@@ -207,13 +207,18 @@
     <string name="language_settings">Ajustes de Idioma</string>
     <string name="choose_language">Elegir Idioma</string>
     <string name="language_default">Predeterminado del sistema</string>
-    <string name="language_en">Inglés (English)</string>
+    <string name="language_en">Inglés (Default)</string>
+    <string name="language_en_us">Inglés (US)</string>
     <string name="language_zh">Chino (Chinese)</string>
     <string name="language_ja">Japonés (Japanese)</string>
     <string name="language_ko">Coreano (Korean)</string>
     <string name="language_ru">Ruso (Russian)</string>
     <string name="language_fr">Francés (French)</string>
     <string name="language_es">Español</string>
+    <string name="language_ko_kp">Coreano (Korean-KP)</string>
+    <string name="language_it">Italiano (Italian)</string>
+    <string name="language_de">Alemán (German)</string>
+    <string name="language_ar">Árabe (Arabic)</string>
 
     <string name="error_opening_paypal">No se pudo abrir PayPal</string>
     <string name="server_running_no_network">Servidor en ejecución - Sin red</string>
@@ -227,4 +232,36 @@
     <string name="repository_updated">Repositorio actualizado</string>
     <string name="repository_created">Repositorio creado</string>
     <string name="error_occurred">Ocurrió un error: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>

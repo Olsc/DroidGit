@@ -57,7 +57,6 @@ public class GitServer extends NanoHTTPD {
 
         Log.i(TAG, "Incoming request: " + method + " " + uri);
 
-
         if (uri.endsWith("/info/refs")) {
             return handleInfoRefs(session, uri);
         } else if (uri.endsWith("/git-upload-pack")) {
@@ -65,7 +64,6 @@ public class GitServer extends NanoHTTPD {
         } else if (uri.endsWith("/git-receive-pack")) {
             return handleGitReceivePack(session, uri);
         }
-
 
         if (uri.equals("/") || uri.equals("/index.html")) {
             return serveStaticIndex();
@@ -85,7 +83,6 @@ public class GitServer extends NanoHTTPD {
 
         return newFixedLengthResponse(Response.Status.NOT_FOUND, NanoHTTPD.MIME_PLAINTEXT, "Not Found");
     }
-
 
     private String extractRepoName(String uri) {
 
@@ -120,7 +117,6 @@ public class GitServer extends NanoHTTPD {
 
             java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
 
-            
             String serviceLine = "# service=" + service + "\n";
             writePacketLine(out, serviceLine);
             out.write("0000".getBytes("UTF-8"));
@@ -301,7 +297,6 @@ public class GitServer extends NanoHTTPD {
                     b = in.read();
                 }
             }
-
 
             StringBuilder sb = new StringBuilder();
             int b;
@@ -485,7 +480,8 @@ public class GitServer extends NanoHTTPD {
                 "    <script>\n" +
                 "        window.onerror = function(msg, url, line) {\n" +
                 "            const list = document.getElementById('repo-list');\n" +
-                "            if(list) list.innerHTML += `<div style='color:var(--danger);padding:10px;'>[JS Error] ${msg} (Line: ${line})</div>`;\n" +
+                "            if(list) list.innerHTML += `<div style='color:var(--danger);padding:10px;'>[JS Error] ${msg} (Line: ${line})</div>`;\n"
+                +
                 "        };\n" +
                 "        \n" +
                 "        const i18n = {\n" +
@@ -605,26 +601,33 @@ public class GitServer extends NanoHTTPD {
                 "                const repos = await resp.json();\n" +
                 "                console.log('Loaded repos:', repos);\n" +
                 "                if (!Array.isArray(repos)) throw new Error('Invalid JSON response');\n" +
-                "                list.innerHTML = repos.length ? '' : `<div style='text-align:center;color:var(--text-dim);padding:20px;'>${t.noRepos}</div>`;\n" +
+                "                list.innerHTML = repos.length ? '' : `<div style='text-align:center;color:var(--text-dim);padding:20px;'>${t.noRepos}</div>`;\n"
+                +
                 "                repos.forEach(repo => {\n" +
                 "                    const item = document.createElement('div');\n" +
                 "                    item.className = 'repo-item';\n" +
                 "                    const mapping = repo.mapping || '';\n" +
                 "                    const mappingUrl = mapping.endsWith('.git') ? mapping : mapping + '.git';\n" +
                 "                    const safeName = (repo.name || '').replace(/'/g, \"\\\\'\");\n" +
-                "                    const safeDesc = (repo.description || '').replace(/'/g, \"\\\\'\").replace(/\\n/g, '<br>');\n" +
+                "                    const safeDesc = (repo.description || '').replace(/'/g, \"\\\\'\").replace(/\\n/g, '<br>');\n"
+                +
                 "                    item.innerHTML = `\n" +
                 "                        <div>\n" +
                 "                            <div class=\"repo-name\">${repo.name || 'Unnamed'}</div>\n" +
-                "                            <div style=\"color:var(--text-dim);font-size:0.9em;margin-top:4px;margin-bottom:8px;\">${repo.description || ''}</div>\n" +
+                "                            <div style=\"color:var(--text-dim);font-size:0.9em;margin-top:4px;margin-bottom:8px;\">${repo.description || ''}</div>\n"
+                +
                 "                            <div>\n" +
-                "                                <span class=\"ssh-url\">http://${location.host}/${mappingUrl}</span>\n" +
+                "                                <span class=\"ssh-url\">http://${location.host}/${mappingUrl}</span>\n"
+                +
                 "                            </div>\n" +
                 "                        </div>\n" +
                 "                        <div style=\"display:flex;gap:8px;\">\n" +
-                "                            <a href=\"/browse/${mapping}\" class=\"btn\" style=\"white-space:nowrap;\">${t.browse}</a>\n" +
-                "                            <button class=\"btn\" onclick=\"showEditForm('${repo.id}', '${safeName}', '${safeDesc}')\">${t.edit}</button>\n" +
-                "                            <button class=\"btn btn-danger\" onclick=\"deleteRepo('${repo.id}', '${safeName}')\">${t.delete}</button>\n" +
+                "                            <a href=\"/browse/${mapping}\" class=\"btn\" style=\"white-space:nowrap;\">${t.browse}</a>\n"
+                +
+                "                            <button class=\"btn\" onclick=\"showEditForm('${repo.id}', '${safeName}', '${safeDesc}')\">${t.edit}</button>\n"
+                +
+                "                            <button class=\"btn btn-danger\" onclick=\"deleteRepo('${repo.id}', '${safeName}')\">${t.delete}</button>\n"
+                +
                 "                        </div>\n" +
                 "                    `;\n" +
                 "                    list.appendChild(item);\n" +
@@ -632,10 +635,14 @@ public class GitServer extends NanoHTTPD {
                 "            } catch(e) {\n" +
                 "                console.error('loadRepos Error:', e);\n" +
                 "                let errorMsg = e.name === 'AbortError' ? 'Request timed out / 请求超时' : e.message;\n" +
-                "                list.innerHTML = `<div style='text-align:center;color:var(--danger);padding:20px;'>\n" +
-                "                    <div style='font-weight:bold;margin-bottom:10px;'>${t.error || 'Error: '}</div>\n" +
-                "                    <div style='font-family:monospace;font-size:0.85em;background:rgba(0,0,0,0.2);padding:10px;border-radius:4px;'>${errorMsg}</div>\n" +
-                "                    <button class='btn btn-primary' style='margin-top:20px' onclick='loadRepos()'>Retry / 重试</button>\n" +
+                "                list.innerHTML = `<div style='text-align:center;color:var(--danger);padding:20px;'>\n"
+                +
+                "                    <div style='font-weight:bold;margin-bottom:10px;'>${t.error || 'Error: '}</div>\n"
+                +
+                "                    <div style='font-family:monospace;font-size:0.85em;background:rgba(0,0,0,0.2);padding:10px;border-radius:4px;'>${errorMsg}</div>\n"
+                +
+                "                    <button class='btn btn-primary' style='margin-top:20px' onclick='loadRepos()'>Retry / 重试</button>\n"
+                +
                 "                </div>`;\n" +
                 "            }\n" +
                 "        }\n" +
@@ -705,14 +712,15 @@ public class GitServer extends NanoHTTPD {
         try {
             List<GitRepository> repos = repositoryManager.getAllRepositories();
             Log.i(TAG, "Found " + repos.size() + " repositories in database");
-            
+
             StringBuilder json = new StringBuilder("[");
-            
+
             // 鲁棒的端口读取方案，与ServerService保持一致
             int httpPort = Constants.Prefs.DEFAULT_HTTP_PORT;
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             try {
-                String portStr = prefs.getString(Constants.Prefs.HTTP_PORT, String.valueOf(Constants.Prefs.DEFAULT_HTTP_PORT));
+                String portStr = prefs.getString(Constants.Prefs.HTTP_PORT,
+                        String.valueOf(Constants.Prefs.DEFAULT_HTTP_PORT));
                 httpPort = Integer.parseInt(portStr);
             } catch (ClassCastException e) {
                 try {
@@ -724,8 +732,18 @@ public class GitServer extends NanoHTTPD {
                 httpPort = Constants.Prefs.DEFAULT_HTTP_PORT;
             }
 
+            boolean first = true;
             for (int i = 0; i < repos.size(); i++) {
                 GitRepository r = repos.get(i);
+
+                if (!r.isActive()) {
+                    continue;
+                }
+
+                if (!first) {
+                    json.append(",");
+                }
+
                 json.append("{")
                         .append("\"id\":").append(r.getId()).append(",")
                         .append("\"name\":\"").append(escapeJson(r.getName())).append("\",")
@@ -733,11 +751,12 @@ public class GitServer extends NanoHTTPD {
                         .append("\"description\":\"").append(escapeJson(r.getDescription())).append("\",")
                         .append("\"httpPort\":").append(httpPort)
                         .append("}");
-                if (i < repos.size() - 1)
-                    json.append(",");
+
+                first = false;
             }
             json.append("]");
             Log.i(TAG, "Sending " + repos.size() + " repositories as JSON (" + json.length() + " bytes)");
+
             return newFixedLengthResponse(Response.Status.OK, "application/json", json.toString());
         } catch (Exception e) {
             Log.e(TAG, "Error in listRepositories", e);
@@ -775,7 +794,7 @@ public class GitServer extends NanoHTTPD {
             return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, NanoHTTPD.MIME_PLAINTEXT, errorMsg);
         } catch (Exception e) {
             Log.e(TAG, "Unexpected error in createRepository", e);
-            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, NanoHTTPD.MIME_PLAINTEXT, 
+            return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, NanoHTTPD.MIME_PLAINTEXT,
                     "Internal Server Error");
         }
     }
@@ -816,7 +835,7 @@ public class GitServer extends NanoHTTPD {
             }
 
             int id = Integer.parseInt(idStr);
-            
+
             // 使用RepositoryManager更新仓库
             repositoryManager.updateRepository(id, description);
 
@@ -897,11 +916,12 @@ public class GitServer extends NanoHTTPD {
                 } catch (Exception e) {
                     // 忽略检查异常
                 }
-                
+
                 repo.close();
                 if (isEmptyRepo) {
                     boolean isZh = isChinese(session);
-                    String message = isZh ? "这是一个空的 Git 仓库，请先推送一些代码。" : "This is an empty Git repository. Please push some code first.";
+                    String message = isZh ? "这是一个空的 Git 仓库，请先推送一些代码。"
+                            : "This is an empty Git repository. Please push some code first.";
                     return newFixedLengthResponse(Response.Status.NOT_FOUND, NanoHTTPD.MIME_PLAINTEXT, message);
                 } else {
                     return newFixedLengthResponse(Response.Status.NOT_FOUND, NanoHTTPD.MIME_PLAINTEXT, "Ref not found");
@@ -914,7 +934,6 @@ public class GitServer extends NanoHTTPD {
             ObjectId targetId = tree.getId();
             FileMode targetMode = FileMode.TREE;
 
-
             if (!path.isEmpty()) {
                 TreeWalk tw = TreeWalk.forPath(repo, path, tree);
                 if (tw != null) {
@@ -926,7 +945,6 @@ public class GitServer extends NanoHTTPD {
                             "Path not found");
                 }
             }
-
 
             if (isRaw) {
                 if ((targetMode.getBits() & FileMode.TYPE_FILE) == 0
@@ -944,7 +962,6 @@ public class GitServer extends NanoHTTPD {
             boolean isZh = isChinese(session);
             String title = (isZh ? "浏览 - " : "Browse - ") + mapping;
 
-
             StringBuilder html = new StringBuilder();
             html.append(
                     "<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>")
@@ -956,7 +973,6 @@ public class GitServer extends NanoHTTPD {
             html.append(
                     "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js\"></script>");
             html.append("</head><body><div class='container'>");
-
 
             html.append("<div class='header'><h2><a href='/' class='btn-back'>&larr; ").append(isZh ? "返回首页" : "Home")
                     .append("</a> <span style='margin-left:15px;color:white;font-weight:300;'>").append(mapping)
@@ -1002,7 +1018,6 @@ public class GitServer extends NanoHTTPD {
             }
             html.append("</span></div>");
 
-
             if ((targetMode.getBits() & FileMode.TYPE_TREE) != 0) {
                 html.append("<table><thead><tr><th>").append(isZh ? "名称" : "Name").append("</th><th>")
                         .append(isZh ? "类型" : "Type").append("</th><th>").append(isZh ? "大小" : "Size")
@@ -1043,10 +1058,8 @@ public class GitServer extends NanoHTTPD {
                     }
                     html.append("</td>");
 
-
                     html.append("<td style='color:var(--text-dim);font-size:0.9em;'>")
                             .append(isTree ? (isZh ? "目录" : "DIR") : (isZh ? "文件" : "FILE")).append("</td>");
-
 
                     html.append("<td style='color:var(--text-dim);font-size:0.9em;text-align:right;'>");
                     if (!isTree) {
@@ -1057,7 +1070,6 @@ public class GitServer extends NanoHTTPD {
                         }
                     }
                     html.append("</td>");
-
 
                     html.append("<td style='color:var(--text-dim);font-size:0.9em;text-align:right;'>");
                     Date date = getLastModifiedDate(repo, commitId, fullPath);
@@ -1112,7 +1124,7 @@ public class GitServer extends NanoHTTPD {
                 }
 
             } else {
-                
+
                 org.eclipse.jgit.lib.ObjectLoader loader = repo.open(targetId);
                 long size = loader.getSize();
                 String rawUrl = "?ref=" + refName + "&path=" + path + "&raw=true";
@@ -1234,14 +1246,15 @@ public class GitServer extends NanoHTTPD {
                 } catch (Exception e) {
                     // 忽略检查异常
                 }
-                
+
                 String errorMessage = isZh ? "引用未找到" : "Ref not found";
                 if (isEmptyRepo) {
-                    errorMessage = isZh ? "这是一个空的 Git 仓库，请先推送一些代码。" : "This is an empty Git repository. Please push some code first.";
+                    errorMessage = isZh ? "这是一个空的 Git 仓库，请先推送一些代码。"
+                            : "This is an empty Git repository. Please push some code first.";
                 } else {
                     errorMessage += ": " + refName;
                 }
-                
+
                 html.append("<div class='card'>").append(errorMessage).append("</div></div></body></html>");
                 repo.close();
                 return newFixedLengthResponse(Response.Status.NOT_FOUND, NanoHTTPD.MIME_HTML, html.toString());

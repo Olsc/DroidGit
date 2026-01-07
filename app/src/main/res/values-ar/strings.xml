@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DroidGit</string>
+    <string name="add_user_fullname">الاسم الكامل</string>
+    <string name="add_user_email">البريد الإلكتروني</string>
+    <string name="add_user_username">اسم المستخدم</string>
+    <string name="add_user_password">كلمة المرور</string>
+    <string name="add_user_publickey">المفتاح العام</string>
+    <string name="add_repository_name">الاسم</string>
+    <string name="add_repository_mapping">المسار (Mapping)</string>
+    <string name="add_repository_description">الوصف</string>
+    <string name="add_user_title">إضافة مستخدم جديد</string>
+    <string name="add_user_activate">تفعيل المستخدم</string>
+    <string name="add_repository_title">إضافة مستودع</string>
+    <string name="click_to_disable">انقر للتعطيل</string>
+    <string name="click_to_enable">انقر للتفعيل</string>
+    <string name="settings_git_repositories_directory">دليل مستودعات Git</string>
+    <string name="settings_http_server_port">منفذ خادم HTTP</string>
+
+
+	<string name="repositories_no_repositories_label">لا توجد مستودعات</string>
+	<string name="users_no_users_label">لا يوجد مستخدمون</string>
+	<string name="home_start">تشغيل</string>
+	<string name="home_stop">إيقاف</string>
+	<string name="statusbar_notification">إشعارات شريط الحالة</string>
+	<string name="autostart">تشغيل تلقائي</string>
+	<string name="autostart_summary_on">تشغيل تلقائي عند اتصال WiFi</string>
+	<string name="autostart_summary_off">تشغيل تلقائي عند اتصال WiFi</string>
+	<string name="autostop">إيقاف تلقائي</string>
+	<string name="autostop_summary_on">إيقاف تلقائي عند فصل WiFi</string>
+	<string name="autostop_summary_off">إيقاف تلقائي عند فصل WiFi</string>
+
+	<string name="wifi_connected_to">متصل بـ WiFi</string>
+	<string name="network_ready">الشبكة جاهزة</string>
+	<string name="wifi_not_connected">WiFi غير متصل</string>
+	<string name="no_repositories">لا توجد مستودعات</string>
+	<string name="add_permission">إضافة صلاحية</string>
+	<string name="no_permissions">لا توجد صلاحيات</string>
+	<string name="permissions">الصلاحيات</string>
+	<string name="edit">تعديل</string>
+	<string name="activate">عام</string>
+	<string name="deactivate">أرشفة</string>
+	<string name="delete">حذف</string>
+	<string name="repository_details">تفاصيل المستودع</string>
+	<string name="no_users">لا يوجد مستخدمون</string>
+	<string name="add_repository_activate">عام</string>
+	<string name="server_settings">إعدادات الخادم</string>
+	<string name="general_settings">إعدادات عامة</string>
+	<string name="eula">
+		اتفاقية ترخيص المستخدم النهائي لـ DroidGit (EULA)\n
+		\n
+		اتفاقية ترخيص المستخدم النهائي لـ DroidGit (EULA) هي اتفاقية قانونية بينك وبين مطوري برنامج DroidGit. يرجى قراءة وفهم جميع الشروط بعناية، وخاصة الشروط التي تعفي المطور من المسؤولية أو تحد منها، والشروط التي تقيد حقوق المستخدم.\n
+		\n
+		تنطبق هذه الاتفاقية على مستخدمي (يشار إليهم فيما يلي باسم \"المستخدم\") لتطبيق خادم DroidGit Git وتهدف إلى تحديد شروط وأحكام استخدام البرنامج.\n
+		\n
+		يرجى قراءة المحتوى التالي بعناية. إذا كنت لا توافق على أي جزء من هذه الاتفاقية، فيرجى عدم استخدام برنامج وخدمات DroidGit. من خلال تثبيت هذا البرنامج أو نسخه أو استخدامه بأي طريقة أخرى، فإنك توافق مع مطور DroidGit (Olsc) وتقبل طواعية جميع شروط هذه الاتفاقية.\n
+		\n
+		هذا البرنامج عبارة عن تطبيق خادم Git مفتوح المصدر، تم إصداره بموجب رخصة Apache، الإصدار 2.0، وتم تطويره وصيانته بواسطة Olsc.\n
+		\n
+		احترام خصوصية المستخدم هو مبدأ أساسي للمطورين.\n
+		\n
+		أولاً. شرح الأذونات\n
+		باعتباره تطبيق خادم Git مفتوح المصدر، يتطلب DroidGit الأذونات التالية لتوفير الوظائف الأساسية. الأغراض المحددة لهذه الأذونات معلنة هنا:\n
+		\n
+		1. إذن التخزين: يتطلب التطبيق أذونات \"قراءة التخزين\" و\"كتابة التخزين\" لإنشاء ملفات مستودع Git وقراءتها وكتابتها، وهو أمر ضروري لوظائفه الأساسية.\n
+		\n
+		2. إذن الشبكة: يتطلب التطبيق إذن \"الاتصال بالشبكة\" لبدء خادم HTTP، مما يسمح للأجهزة الأخرى بالوصول إلى مستودعات Git الخاصة بك عبر الشبكة. يتضمن ذلك أذونات مثل \"الوصول الكامل إلى الشبكة\" و\"عرض اتصالات WLAN\" و\"تغيير اتصال الشبكة\" لمراقبة حالة الشبكة للتحكم التلقائي في الخدمة.\n
+		\n
+		3. إذن الموقع: في أنظمة Android 8.1+، مطلوب إذن الموقع للحصول على اسم WiFi الحالي (SSID)، ويستخدم فقط لاسترداد معلومات الشبكة. نحن لا نجمع بيانات موقعك الجغرافي.\n
+		\n
+		4. أذونات خدمة المقدمة وقفل الاستيقاظ (Wake Lock): تستخدم لضمان بقاء خادم Git نشطًا عندما تكون الشاشة مغلقة أو عندما يعمل التطبيق في الخلفية، مما يمنع انقطاع الاتصال.\n
+		\n
+		5. إذن الإشعارات: يستخدم لعرض حالة الخدمة في شريط الحالة، مما يمنع النظام من إيقاف خدمة الخلفية.\n
+		\n
+		6. إذن استعلام الحزم: يستخدم في صفحة التبرع لاكتشاف ما إذا كانت البرامج الأخرى المطلوبة مثبتة.\n
+		\n
+		7. إذن التشغيل التلقائي: يستخدم لبدء خادم Git تلقائيًا عند تشغيل الجهاز (ميزة اختيارية).\n
+		\n
+		8. إذن الإيقاف التلقائي: يستخدم لإيقاف الخادم تلقائيًا عند فصل WiFi (ميزة اختيارية).\n
+		\n
+		يحترم هذا التطبيق خصوصية المستخدم؛ يتم تخزين جميع البيانات على جهازك المحلي. كبرنامج مفتوح المصدر، فأنت حر في استخدام هذا البرنامج ودراسته وتعديله وتوزيعه. باستثناء خدمات الشبكة الضرورية (التي تسمح للأجهزة الأخرى بالوصول إلى مستودعات Git الخاصة بك)، فإننا لا نقوم بتحميل أي بيانات خصوصية شخصية.\n
+		\n
+		ثانياً. إخلاء المسؤولية\n
+		الأنشطة التالية محظورة تمامًا:\n
+		\n
+		1. فك حزمة التثبيت غير المصرح به، أو الهندسة العكسية، أو تعديل محتوى التطبيق، أو إعادة التوجيه بصفة شخصية، أو فرض رسوم إضافية للالتفاف على حماية حقوق النشر.\n
+		\n
+		2. استخدام DroidGit لأي أنشطة غير قانونية أو انتهاكات للقوانين واللوائح المحلية، بما في ذلك على سبيل المثال لا الحصر انتهاك حقوق الملكية الفكرية للآخرين أو نشر محتوى غير قانوني.\n
+		\n
+		3. يجب على المستخدمين استخدام وظائف خادم Git بشكل معقول ويجب عدم إساءة استخدام الخدمة في الهجمات الضارة، أو استهلاك النطاق الترددي للشبكة على نطاق واسع، أو غيرها من الإجراءات التي تؤثر على الاستخدام الطبيعي للآخرين.\n
+		\n
+		4. نظرًا لأن DroidGit هو تطبيق خادم Git، فإن المستخدمين مسؤولون عن ضمان أن محتوى مستودعات التعليمات البرمجية المستضافة قانوني ومتوافق. المطورون غير مسؤولين عن المحتوى الذي يستضيفه المستخدمون.\n
+		\n
+		5. يجب على المستخدمين حماية معلومات حساباتهم وكلمات المرور الخاصة بهم بشكل صحيح. المطورون غير مسؤولين عن المشكلات الأمنية الناجمة عن الحفظ غير السليم من قبل المستخدمين.\n
+		\n
+		6. بما أن DroidGit يسمح بالوصول إلى الشبكة، فإن المستخدمين مسؤولون عن ضمان تكوينات أمان الشبكة الصحيحة لتجنب المخاطر الناجمة عن الإعدادات غير الصحيحة.\n
+		\n
+		7. باستثناء ما هو منصوص عليه خلاف ذلك، المطورون غير مسؤولين عما يلي:\n
+		\n
+		(1) أي تأثير ناتج عن هجمات المتسللين، أو فيروسات الكمبيوتر، أو التعديلات الفنية من قبل أقسام الاتصالات، أو الإغلاق المؤقت بسبب الرقابة الحكومية، أو أسباب طرف ثالث (بما في ذلك القوة القاهرة مثل فشل روابط العمود الفقري الدولية، والحرائق، والفيضانات، والبرق، والزلازل، والأعاصير، وثوران البراكين، والأوبئة، والإضرابات، والحروب، وما إلى ذلك) وغيرها من عمليات الجمع أو التسريب أو الضياع أو السرقة أو العبث ببيانات المستخدم الشخصية بشكل ضار والتي لا تنتج عن خطأ المطور نفسه، وأي خسائر ناتجة للمستخدم والأطراف الثالثة.\n
+		\n
+		(2) يجب عليك الامتثال للقوانين واللوائح المحلية ومعايير السلوك عبر الإنترنت المقبولة دوليًا عند استخدام DroidGit. يجب ألا تستخدم DroidGit لأي أنشطة تنتهك مبادئ السلام والاحترام والمساواة، بما في ذلك على سبيل المثال لا الحصر:\n
+		\n
+		(أ) الترويج لخطاب الكراهية أو التمييز أو العنصرية أو العنف؛\n
+		(ب) توزيع مواد الاعتداء الجنسي على الأطفال (CSAM)، أو المحتوى الإرهابي، أو المضايقات غير القانونية؛\n
+		(ج) انتهاك خصوصية الآخرين أو سمعتهم أو حقوق الملكية الفكرية الخاصة بهم؛\n
+		(د) المساس بأمن الشبكة بشكل ضار، أو نشر البرامج الضارة، أو إجراء هجمات سيبرانية؛\n
+		(هـ) المشاركة في أي أنشطة تنتهك الاتفاقيات الدولية لحقوق الإنسان.\n
+		\n
+		ثالثاً. شروط التقييد\n
+		باعتباره تطبيق خادم Git مفتوح المصدر تم إصداره بموجب رخصة Apache، الإصدار 2.0، فإنك تتمتع بحرية استخدام البرنامج وتعديله وتوزيعه بموجب شروط رخصة Apache.\n
+		\n
+		يجب عليك الامتثال للقوانين واللوائح المحلية واحترام الأخلاق والعادات المحلية أثناء استخدام خدمات DroidGit. إذا كان سلوكك ينتهك القوانين أو العادات المحلية، فستتحمل المسؤولية بشكل مستقل.\n
+		\n
+		كمستخدم لبرنامج مفتوح المصدر، لديك الحق في الحصول على الكود المصدري لهذا البرنامج ويمكنك استخدام هذا البرنامج وتعديله وتوزيعه بحرية وفقًا لشروط رخصة Apache، الإصدار 2.0.\n
+		\n
+		يجب عليك تجنب إشراك المطورين في الأحداث السياسية والعامة من خلال استخدام خدمات DroidGit؛ وإلا فإن للمطورين الحق في تعليق أو إنهاء الخدمات لك.\n
+		\n
+		رابعاً. تغييرات السياسة\n
+		يجب أن تدرك أننا سنقدم الخدمات بناءً على الشروط المتغيرة لاتفاقية ترخيص المستخدم النهائي لـ DroidGit (EULA) فقط بعد تأكيدك وموافقتك عليها. لديك الحق في رفض الاتفاقية المتغيرة، ولكن يرجى العلم أنه بمجرد الرفض، قد لا تتمكن من الاستمرار في استخدام خدمات ووظائف DroidGit.\n
+		\n
+		في حالة حدوث أي تغييرات، سنقوم بإخطارك والحصول على موافقتك مرة أخرى قبل أن تدخل التغييرات حيز التنفيذ. إذا كنت لا توافق على التغييرات، يمكنك اختيار التوقف عن استخدام خدماتنا؛ إذا واصلت استخدام خدماتنا، فهذا يشير إلى موافقتك على الالتزام باتفاقية EULA المنقحة.\n
+		\n
+		خامساً. الملكية الفكرية\n
+		DroidGit هو تطبيق خادم Git مفتوح المصدر تم إصداره بموجب رخصة Apache، الإصدار 2.0، وتم تطويره وصيانته بواسطة Olsc. تم إصداره بموجب رخصة Apache، ولديك الحق في استخدام هذا البرنامج ونسخه وتوزيعه وتعديله بشرط الامتثال لشروط الترخيص.\n
+		\n
+		تتضمن المحتويات الرئيسية لرخصة Apache، الإصدار 2.0 ما يلي:\n
+		\n
+		1. لديك الحق في استخدام البرنامج لأي غرض؛\n
+		2. لديك الحق في دراسة وتعديل الكود المصدري ليناسب احتياجاتك؛\n
+		3. لديك الحق في توزيع النسخ للآخرين؛\n
+		4. لديك الحق في توزيع الإصدارات المعدلة بموجب نفس شروط الترخيص.\n
+		\n
+		وفقًا لمتطلبات رخصة Apache، يجب عليك تضمين إشعار حقوق النشر الأصلي وإخلاء المسؤولية في جميع التوزيعات. راجع ملف LICENSE في جذر المشروع للحصول على شروط الترخيص الكاملة.\n
+		\n
+		سادساً. اتصل بنا\n
+		إذا كانت لديك شكاوى أو بلاغات حول أمن معلومات الشبكة، أو أي أسئلة أو تعليقات أو اقتراحات بخصوص هذه الاتفاقية ومعلوماتك، أو أسئلة حول هذا البيان، يرجى الاتصال بنا.\n
+		\n
+		هذا المشروع هو مشروع مفتوح المصدر يعتمد على رخصة Apache، الإصدار 2.0. يمكنك الحصول على الكود المصدري ومزيد من معلومات الاتصال عبر الصفحة الرئيسية للمشروع. كمستخدم لبرنامج مفتوح المصدر، لديك الحق في الحصول على الكود المصدري الكامل وتعديله/توزيعه وفقًا لشروط رخصة Apache.\n
+		\n
+		ملاحظة خاصة: تنطبق هذه الاتفاقية فقط على مستخدمي تطبيق خادم DroidGit Git. حقوق التعديل والتفسير تعود للمطورين.\n
+		\n
+		خادم DroidGit Git - استضف مستودعات Git في أي وقت وفي أي مكان\n
+		\n
+		المطور: Olsc\n
+		\n
+		الإصدار: اتفاقية ترخيص المستخدم النهائي لـ DroidGit (EULA)\n
+		\n
+		يناير 2026
+	</string>
+	<string name="updates">تحديثات الإصدار</string>
+    <string name="about">حول</string>
+    <string name="settings">الإعدادات</string>
+
+    <string name="activity_settings_label">الإعدادات</string>
+    <string name="activity_repository_details_label">تفاصيل المستودع</string>
+    <string name="activity_setup_label">المستودعات</string>
+
+    <string name="notification_channel_name">خدمة Git HTTP</string>
+    <string name="notification_ticker">تم تشغيل خادم Git HTTP!</string>
+    <string name="notification_title">خادم Git HTTP قيد التشغيل</string>
+    <string name="notification_action_restart">إعادة التشغيل</string>
+    <string name="miui_dialog_title">قيود الخلفية في MIUI</string>
+    <string name="miui_dialog_message">تم اكتشاف أنك تستخدم نظام MIUI. للحفاظ على استمرار عمل خادم Git، يوصى بالقيام بالإعدادات التالية:\n\n1. تفعيل إذن \"التشغيل التلقائي\"\n2. تعطيل قيود \"توفير البطارية\"\n3. \"قفل\" التطبيق في المهام الأخيرة\n\nالانتقال إلى الإعدادات الآن؟</string>
+    <string name="miui_dialog_button_settings">الذهاب للإعدادات</string>
+    <string name="miui_dialog_button_later">لاحقاً</string>
+    <string name="miui_dialog_button_dont_show">عدم الإظهار مرة أخرى</string>
+    <string name="unknown_ssid">غير معروف</string>
+    <string name="enable_all_files_access_toast">يرجى تفعيل صلاحية الوصول إلى جميع الملفات لإنشاء مستودعات Git</string>
+    <string name="opening_app_toast">جاري فتح %1$s...</string>
+    <string name="app_not_installed_toast">%1$s غير مثبت.</string>
+    <string name="error_opening_app_toast">خطأ أثناء فتح %1$s</string>
+    <string name="imported_repositories_toast">تم استيراد %1$d مستودعاً تلقائياً.</string>
+    <string name="error_field_required">هذا الحقل مطلوب</string>
+
+    <string name="splash_subtitle">خادم Git للأندرويد</string>
+    <string name="wifi_searching">جاري البحث...</string>
+    <string name="server_log_ready">سجل الخادم: جاهز...</string>
+    <string name="about_support_title">حول ودعم المشروع</string>
+    <string name="donate_description">دعمكم يساعد في استمرار هذا المشروع. شكراً لاستخدامكم DroidGit.</string>
+    <string name="donate_current_maintainer_title">المطور</string>
+    <string name="donate_subscription_description">ادعم التطوير المستمر وصيانة الخادم.</string>
+    <string name="donate_button_subscription">دعم عبر الاشتراك</string>
+
+    <string name="donate_button_paypal">تبرع عبر PayPal</string>
+    <string name="donate_button_alipay">AliPay</string>
+    <string name="donate_button_wechat">WeChat Pay</string>
+
+    <string name="about_opensource_title">المصادر المفتوحة</string>
+    <string name="about_current_project_label">صفحة المشروع:</string>
+    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_repositories">المستودعات</string>
+    <string name="menu_scan">مسح المستودعات</string>
+
+    <string name="server_info_format">لوحة التحكم: http://%1$s:%2$s</string>
+    <string name="menu_skip">تخطي</string>
+    <string name="dialog_delete_repository_title">تأكيد الحذف؟</string>
+    <string name="dialog_delete_repository_message">هل أنت متأكد من حذف %1$s؟ سيؤدي ذلك لإزالة بياناته من DroidGit. عند حذف مستودع، سيتم حذف ملفات المستودع المحلية نهائياً.</string>
+
+    <string name="language_settings">إعدادات اللغة</string>
+    <string name="choose_language">اختر اللغة</string>
+    <string name="language_default">افتراضي النظام</string>
+    <string name="language_en">الإنجليزية (Default)</string>
+    <string name="language_en_us">الإنجليزية (US)</string>
+    <string name="language_zh">الصينية (Chinese)</string>
+    <string name="language_ja">اليابانية (Japanese)</string>
+    <string name="language_ko">الكورية (Korean)</string>
+    <string name="language_ru">الروسية (Russian)</string>
+    <string name="language_fr">الفرنسية (French)</string>
+    <string name="language_es">الإسبانية (Spanish)</string>
+    <string name="language_ko_kp">الكورية (Korean-KP)</string>
+    <string name="language_it">الإيطالية (Italian)</string>
+    <string name="language_de">الألمانية (German)</string>
+    <string name="language_ar">العربية</string>
+
+    <string name="error_opening_paypal">تعذر فتح PayPal</string>
+    <string name="server_running_no_network">الخادم يعمل - لا توجد شبكة</string>
+    <string name="network_ready_format">الشبكة جاهزة: %s</string>
+    <string name="server_stopped">تم إيقاف الخادم</string>
+    <string name="server_stopped_no_network">تم إيقاف الخادم - لا توجد شبكة</string>
+
+    <string name="error_loading_repositories">خطأ أثناء تحميل المستودعات</string>
+    <string name="error_deleting_repository">خطأ أثناء حذف المستودع</string>
+    <string name="error_updating_repository">خطأ أثناء تحديث المستودع</string>
+    <string name="save">حفظ</string>
+    <string name="repository_updated">تم تحديث المستودع</string>
+    <string name="repository_created">تم إنشاء المستودع</string>
+    <string name="error_occurred">حدث خطأ: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
+</resources>
