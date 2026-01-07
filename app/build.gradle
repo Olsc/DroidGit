@@ -43,7 +43,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.13.0'
     implementation 'com.j256.ormlite:ormlite-android:6.1'
-    implementation 'org.eclipse.jgit:org.eclipse.jgit:5.13.3.202401111512-r'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:7.5.0.202512021534-r'
     implementation 'commons-validator:commons-validator:1.10.1'
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
 }
