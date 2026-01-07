@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme); 
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home_dashboard);
 
         initViews();
-        
+
         eulaHelper = new EulaHelper(this);
         if (!EulaHelper.isAccepted(this)) {
             eulaHelper.show();
@@ -86,9 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         setupServerStatusReceiver();
         checkAndImportRepositories();
-        
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean autoStartOnWifi = prefs.getBoolean(Constants.Prefs.AUTO_START_ON_WIFI, Constants.Prefs.DEFAULT_AUTO_START_ON_WIFI);
+        boolean autoStartOnWifi = prefs.getBoolean(Constants.Prefs.AUTO_START_ON_WIFI,
+                Constants.Prefs.DEFAULT_AUTO_START_ON_WIFI);
         if (autoStartOnWifi && NetworkUtils.isWifiReady(this) && !isServerRunning) {
             startServer();
         }
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         logTextView = findViewById(R.id.homeWifiSSID);
         wifiStatusTextView = findViewById(R.id.homeWifiStatus);
         wirelessImageView = findViewById(R.id.homeWirelessImage);
-        
+
         btnStartStop = findViewById(R.id.homeBtnStartStop);
         btnStartStop.setOnClickListener(this);
 
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.homeBtnStartStop) {
-             if (isServerRunning) {
+            if (isServerRunning) {
                 stopServer();
             } else {
                 startServer();
@@ -166,12 +167,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, AboutActivity.class));
             return true;
         });
-        
+
         return true;
     }
 
     private void startServer() {
-        if (!checkAndRequestPermissions()) return;
+        if (!checkAndRequestPermissions())
+            return;
+
+        checkAndImportRepositories();
 
         Intent intent = new Intent(this, ServerService.class);
         intent.setAction(Constants.Action.GIT_SERVER_STARTED);
@@ -207,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             registerReceiver(serverStatusReceiver, filter);
         }
-        
+
         isServerRunning = NetworkUtils.isServiceRunning(this, ServerService.class);
         updateUI();
     }
@@ -217,31 +221,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 获取网络状态
         boolean networkReady = NetworkUtils.isWifiReady(this);
         String ipAddress = NetworkUtils.getIpAddress();
-        
+
         if (isServerRunning) {
             btnStartStop.setText(R.string.home_stop);
-            
+
             int port;
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             try {
-                port = Integer.parseInt(prefs.getString(Constants.Prefs.HTTP_PORT, String.valueOf(Constants.Prefs.DEFAULT_HTTP_PORT)));
+                port = Integer.parseInt(
+                        prefs.getString(Constants.Prefs.HTTP_PORT, String.valueOf(Constants.Prefs.DEFAULT_HTTP_PORT)));
             } catch (ClassCastException e) {
                 try {
-                     port = prefs.getInt(Constants.Prefs.HTTP_PORT, Constants.Prefs.DEFAULT_HTTP_PORT);
+                    port = prefs.getInt(Constants.Prefs.HTTP_PORT, Constants.Prefs.DEFAULT_HTTP_PORT);
                 } catch (Exception ex) {
                     port = Constants.Prefs.DEFAULT_HTTP_PORT;
                 }
             } catch (NumberFormatException e) {
                 port = Constants.Prefs.DEFAULT_HTTP_PORT;
             }
-            
+
             if (networkReady && ipAddress != null && !ipAddress.isEmpty()) {
                 // 网络可用，显示访问地址
                 String info = getString(R.string.server_info_format, ipAddress, String.valueOf(port));
                 ipTextView.setText(info);
                 ipTextView.setVisibility(View.VISIBLE);
                 logTextView.setText(R.string.notification_title);
-                
+
                 // 更新网络状态显示
                 wifiStatusTextView.setText(R.string.network_ready);
                 wirelessImageView.setImageResource(R.drawable.ic_wireless_enabled);
@@ -250,20 +255,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ipTextView.setText(R.string.wifi_not_connected);
                 ipTextView.setVisibility(View.VISIBLE);
                 logTextView.setText(R.string.server_running_no_network);
-                
+
                 // 更新网络状态显示
                 wifiStatusTextView.setText(R.string.wifi_not_connected);
                 wirelessImageView.setImageResource(R.drawable.ic_wireless_disabled);
             }
         } else {
             btnStartStop.setText(R.string.home_start);
-            
+
             if (networkReady && ipAddress != null && !ipAddress.isEmpty()) {
                 // 网络可用但服务未启动
                 ipTextView.setText(getString(R.string.network_ready_format, ipAddress));
                 ipTextView.setVisibility(View.VISIBLE);
                 logTextView.setText(R.string.server_stopped);
-                
+
                 // 更新网络状态显示
                 wifiStatusTextView.setText(R.string.network_ready);
                 wirelessImageView.setImageResource(R.drawable.ic_wireless_enabled);
@@ -272,7 +277,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ipTextView.setText(R.string.wifi_not_connected);
                 ipTextView.setVisibility(View.VISIBLE);
                 logTextView.setText(R.string.server_stopped_no_network);
-                
+
                 // 更新网络状态显示
                 wifiStatusTextView.setText(R.string.wifi_not_connected);
                 wirelessImageView.setImageResource(R.drawable.ic_wireless_disabled);
@@ -288,10 +293,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 RepositoryManager rm = new RepositoryManager(MainActivity.this);
                 int count = rm.scanAndImportAll();
                 Log.i(TAG, "Scan context: default path, result count: " + count);
-                
+
                 if (count > 0) {
-                    runOnUiThread(() -> Toast.makeText(MainActivity.this, 
-                        getString(R.string.imported_repositories_toast, count), Toast.LENGTH_SHORT).show());
+                    runOnUiThread(() -> Toast.makeText(MainActivity.this,
+                            getString(R.string.imported_repositories_toast, count), Toast.LENGTH_SHORT).show());
                 }
             }).start();
         } else {
@@ -301,45 +306,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private boolean checkAndRequestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-             if (!Environment.isExternalStorageManager()) {
-                 try {
-                     Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                     intent.addCategory("android.intent.category.DEFAULT");
-                     intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
-                     startActivity(intent);
-                 } catch (Exception e) {
-                     Intent intent = new Intent();
-                     intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                     startActivity(intent);
-                 }
-                 Toast.makeText(this, R.string.enable_all_files_access_toast, Toast.LENGTH_LONG).show();
-                 return false;
-             }
+            if (!Environment.isExternalStorageManager()) {
+                try {
+                    Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                    intent.addCategory("android.intent.category.DEFAULT");
+                    intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Intent intent = new Intent();
+                    intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                    startActivity(intent);
+                }
+                Toast.makeText(this, R.string.enable_all_files_access_toast, Toast.LENGTH_LONG).show();
+                return false;
+            }
         } else {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) 
-                    != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, 
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[] { Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE },
                         PERMISSION_REQ_CODE);
                 return false;
             }
         }
-        
+
         if (Build.VERSION.SDK_INT >= 33) {
-             if (ContextCompat.checkSelfPermission(this, "android.permission.POST_NOTIFICATIONS") 
-                    != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, 
-                        new String[]{"android.permission.POST_NOTIFICATIONS"}, 
+            if (ContextCompat.checkSelfPermission(this,
+                    "android.permission.POST_NOTIFICATIONS") != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[] { "android.permission.POST_NOTIFICATIONS" },
                         PERMISSION_REQ_CODE);
                 return false;
             }
         }
-        
+
         return true;
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_REQ_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -364,7 +371,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }, 500);
         }
     }
-    
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

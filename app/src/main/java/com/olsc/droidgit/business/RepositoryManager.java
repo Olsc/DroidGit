@@ -33,14 +33,13 @@ public class RepositoryManager {
     public RepositoryManager(Context context) {
         this.context = context;
         this.dbManager = DatabaseManager.getInstance(context);
-        
+
         // 获取仓库存储路径
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         this.repositoriesBasePath = prefs.getString(
                 Constants.Prefs.GIT_ROOT_DIR,
-                Constants.Prefs.DEFAULT_GIT_ROOT_DIR
-        );
-        
+                Constants.Prefs.DEFAULT_GIT_ROOT_DIR);
+
         // 确保仓库目录存在
         File baseDir = new File(repositoriesBasePath);
         if (!baseDir.exists()) {
@@ -51,14 +50,15 @@ public class RepositoryManager {
 
     /**
      * 创建新仓库
-     * @param name 仓库名称
-     * @param mapping URL映射路径
+     * 
+     * @param name        仓库名称
+     * @param mapping     URL映射路径
      * @param description 描述
      * @return 创建的仓库对象
      */
-    public GitRepository createRepository(String name, String mapping, String description) 
+    public GitRepository createRepository(String name, String mapping, String description)
             throws RepositoryException {
-        
+
         // 验证参数
         if (name == null || name.trim().isEmpty()) {
             throw new RepositoryException("Repository name cannot be empty");
@@ -103,6 +103,7 @@ public class RepositoryManager {
 
     /**
      * 导入现有仓库（仅在数据库中注册，不创建物理文件）
+     * 
      * @param folderName 物理文件夹名称
      * @return 导入的仓库对象，如果已存在或无效则返回null
      */
@@ -114,7 +115,8 @@ public class RepositoryManager {
         try {
             // 检查物理仓库是否存在（尝试带.git和不带.git的路径）
             File repoDir = new File(repositoriesBasePath, folderName);
-            if (!repoDir.exists()) return null;
+            if (!repoDir.exists())
+                return null;
 
             // 提取仓库名（保持与网页显示逻辑一致）
             String mapping = folderName;
@@ -134,7 +136,7 @@ public class RepositoryManager {
             // 裸仓库：根目录下有 HEAD 和 config
             if (new File(repoDir, "HEAD").exists() && new File(repoDir, "config").exists()) {
                 isGit = true;
-            } 
+            }
             // 非裸仓库：子目录下有 .git
             else if (new File(repoDir, ".git").exists()) {
                 isGit = true;
@@ -148,7 +150,7 @@ public class RepositoryManager {
                 Log.i(TAG, "Imported repository: " + mapping + " from " + folderName);
                 return repository;
             }
-            
+
             return null;
 
         } catch (SQLException e) {
@@ -189,6 +191,7 @@ public class RepositoryManager {
 
     /**
      * 删除仓库
+     * 
      * @param repositoryId 仓库ID
      */
     public void deleteRepository(int repositoryId) throws RepositoryException {
@@ -217,7 +220,7 @@ public class RepositoryManager {
     /**
      * 更新仓库信息
      */
-    public void updateRepository(int repositoryId, String description) 
+    public void updateRepository(int repositoryId, String description)
             throws RepositoryException {
         try {
             GitRepository repository = dbManager.getRepositoryDao().queryForId(repositoryId);
@@ -227,7 +230,7 @@ public class RepositoryManager {
 
             repository.setDescription(description);
             dbManager.getRepositoryDao().update(repository);
-            
+
             Log.i(TAG, "Updated repository: " + repository.getName());
 
         } catch (SQLException e) {
@@ -237,10 +240,11 @@ public class RepositoryManager {
 
     /**
      * 更新仓库对象的所有字段
+     * 
      * @param repository 仓库对象
      */
     public void updateRepository(GitRepository repository) throws RepositoryException {
-         try {
+        try {
             dbManager.getRepositoryDao().update(repository);
             Log.i(TAG, "Updated repository: " + repository.getName());
         } catch (SQLException e) {
@@ -283,7 +287,7 @@ public class RepositoryManager {
     /**
      * 打开JGit仓库对象
      */
-    public org.eclipse.jgit.lib.Repository openJGitRepository(String mapping) 
+    public org.eclipse.jgit.lib.Repository openJGitRepository(String mapping)
             throws RepositoryException {
         try {
             File repoDir = getRepositoryPath(mapping);
@@ -291,8 +295,7 @@ public class RepositoryManager {
                 throw new RepositoryException("Repository not found: " + mapping);
             }
 
-            org.eclipse.jgit.storage.file.FileRepositoryBuilder builder = 
-                    new org.eclipse.jgit.storage.file.FileRepositoryBuilder();
+            org.eclipse.jgit.storage.file.FileRepositoryBuilder builder = new org.eclipse.jgit.storage.file.FileRepositoryBuilder();
             return builder.setGitDir(repoDir)
                     .readEnvironment()
                     .findGitDir()
