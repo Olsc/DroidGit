@@ -38,12 +38,12 @@
 	<string name="no_permissions">권한 없음</string>
 	<string name="permissions">권한</string>
 	<string name="edit">편집</string>
-	<string name="activate">활성화</string>
-	<string name="deactivate">비활성화</string>
+	<string name="activate">공개</string>
+	<string name="deactivate">아카이브</string>
 	<string name="delete">삭제</string>
 	<string name="repository_details">저장소 상세 정보</string>
 	<string name="no_users">사용자 없음</string>
-	<string name="add_repository_activate">저장소 활성화</string>
+	<string name="add_repository_activate">공개</string>
 	<string name="server_settings">서버 설정</string>
 	<string name="general_settings">일반 설정</string>
 	<string name="eula">
@@ -201,13 +201,18 @@
     <string name="language_settings">언어 설정</string>
     <string name="choose_language">언어 선택</string>
     <string name="language_default">시스템 기본값</string>
-    <string name="language_en">영어 (English)</string>
+    <string name="language_en">영어 (Default)</string>
+    <string name="language_en_us">영어 (US)</string>
     <string name="language_zh">중국어 (Chinese)</string>
     <string name="language_ja">일본어 (Japanese)</string>
     <string name="language_ko">한국어</string>
     <string name="language_ru">러시아어 (Russian)</string>
     <string name="language_fr">프랑스어 (French)</string>
     <string name="language_es">스페인어 (Spanish)</string>
+    <string name="language_ko_kp">조선어 (Korean-KP)</string>
+    <string name="language_it">이탈리아어 (Italian)</string>
+    <string name="language_de">독일어 (German)</string>
+    <string name="language_ar">아랍어 (Arabic)</string>
 
     <string name="error_opening_paypal">PayPal을 열 수 없습니다</string>
     <string name="server_running_no_network">서버 실행 중 - 네트워크 없음</string>
@@ -222,4 +227,36 @@
     <string name="repository_updated">저장소가 업데이트되었습니다</string>
     <string name="repository_created">저장소가 생성되었습니다</string>
     <string name="error_occurred">오류가 발생했습니다: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>

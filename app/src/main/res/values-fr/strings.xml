@@ -38,12 +38,12 @@
 	<string name="no_permissions">Aucune permission</string>
 	<string name="permissions">Permissions</string>
 	<string name="edit">Modifier</string>
-	<string name="activate">Activer</string>
-	<string name="deactivate">Désactiver</string>
+	<string name="activate">Public</string>
+	<string name="deactivate">Archiver</string>
 	<string name="delete">Supprimer</string>
 	<string name="repository_details">Détails du dépôt</string>
 	<string name="no_users">Aucun utilisateur</string>
-	<string name="add_repository_activate">Activer le dépôt</string>
+	<string name="add_repository_activate">Public</string>
 	<string name="server_settings">Paramètres du serveur</string>
 	<string name="general_settings">Paramètres généraux</string>
 	<string name="eula">
@@ -201,13 +201,18 @@
     <string name="language_settings">Paramètres de langue</string>
     <string name="choose_language">Choisir la langue</string>
     <string name="language_default">Système par défaut</string>
-    <string name="language_en">Anglais (English)</string>
+    <string name="language_en">Anglais (Default)</string>
+    <string name="language_en_us">Anglais (US)</string>
     <string name="language_zh">Chinois (Chinese)</string>
     <string name="language_ja">Japonais (Japanese)</string>
     <string name="language_ko">Coréen (Korean)</string>
     <string name="language_ru">Russe (Russian)</string>
     <string name="language_fr">Français</string>
     <string name="language_es">Espagnol (Spanish)</string>
+    <string name="language_ko_kp">Coréen (Korean-KP)</string>
+    <string name="language_it">Italien (Italian)</string>
+    <string name="language_de">Allemand (German)</string>
+    <string name="language_ar">Arabe (Arabic)</string>
 
     <string name="error_opening_paypal">Impossible d\'ouvrir PayPal</string>
     <string name="server_running_no_network">Serveur en cours d\'exécution - Pas de réseau</string>
@@ -221,4 +226,36 @@
     <string name="repository_updated">Dépôt mis à jour</string>
     <string name="repository_created">Dépôt créé</string>
     <string name="error_occurred">Une erreur est survenue : %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>

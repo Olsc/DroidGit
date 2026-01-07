@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DroidGit</string>
+    <string name="add_user_fullname">Full Name</string>
+    <string name="add_user_email">Email</string>
+    <string name="add_user_username">Username</string>
+    <string name="add_user_password">Password</string>
+    <string name="add_user_publickey">Public Key</string>
+    <string name="add_repository_name">Name</string>
+    <string name="add_repository_mapping">Mapping</string>
+    <string name="add_repository_description">Description</string>
+    <string name="add_user_title">Add New User</string>
+    <string name="add_user_activate">Activate User</string>
+    <string name="add_repository_title">Add Repository</string>
+    <string name="click_to_disable">Click to disable</string>
+    <string name="click_to_enable">Click to enable</string>
+    <string name="settings_git_repositories_directory">Git Repositories Directory</string>
+    <string name="settings_http_server_port">HTTP Server Port</string>
+
+
+	<string name="repositories_no_repositories_label">No repositories</string>
+	<string name="users_no_users_label">No users</string>
+	<string name="home_start">Start</string>
+	<string name="home_stop">Stop</string>
+	<string name="statusbar_notification">Status bar notification</string>
+	<string name="autostart">Auto start</string>
+	<string name="autostart_summary_on">Auto start on WiFi ON</string>
+	<string name="autostart_summary_off">Auto start on WiFi ON</string>
+	<string name="autostop">Auto stop</string>
+	<string name="autostop_summary_on">Auto stop on WiFi OFF</string>
+	<string name="autostop_summary_off">Auto stop on WiFi OFF</string>
+
+	<string name="wifi_connected_to">WiFi connected to</string>
+	<string name="network_ready">Network ready</string>
+	<string name="wifi_not_connected">WiFi NOT connected</string>
+	<string name="no_repositories">No repositories</string>
+	<string name="add_permission">Add permission</string>
+	<string name="no_permissions">No permissions</string>
+	<string name="permissions">Permissions</string>
+	<string name="edit">Edit</string>
+	<string name="activate">Public</string>
+	<string name="deactivate">Archive</string>
+	<string name="delete">Delete</string>
+	<string name="repository_details">Repository details</string>
+	<string name="no_users">No users</string>
+	<string name="add_repository_activate">Public</string>
+	    <string name="server_settings">Server Settings</string>
+    <string name="general_settings">General Settings</string>
+    <string name="eula">
+        DroidGit End-User License Agreement (EULA)\n
+        \n
+        The DroidGit End-User License Agreement (EULA) is a legal agreement between you and the DroidGit software developers. Please read and understand all terms carefully, especially terms that exempt or limit developer liability, and terms that restrict user rights.\n
+        \n
+        This agreement applies to users (hereinafter \"User\") of the DroidGit Git server application and aims to specify the terms and conditions of software use.\n
+        \n
+        Please read the following content carefully. If you do not agree to any part of this agreement, please do not use DroidGit software and services. By installing, copying, or otherwise using this software, you agree with the DroidGit developer (Olsc) and voluntarily accept all terms of this agreement.\n
+        \n
+        This software is an open-source Git server application, released under the Apache License, Version 2.0, developed and maintained by Olsc.\n
+        \n
+        Respecting user privacy is a fundamental principle of the developers.\n
+        \n
+        I. Permission Explanation\n
+        As an open-source Git server application, DroidGit requires the following permissions to provide core functions. The specific purposes for these permissions are declared here:\n
+        \n
+        1. Storage Permission: The app requires \"Read Storage\" and \"Write Storage\" permissions to create, read, and write Git repository files, which is essential for its core functionality.\n
+        \n
+        2. Network Permission: The app requires \"Network Connection\" permission to start the HTTP server, allowing other devices to access your Git repositories via the network. This includes permissions like \"Full Network Access,\" \"View WLAN Connections,\" and \"Change Network Connectivity\" to monitor network status for automatic service control.\n
+        \n
+        3. Location Permission: On Android 8.1+ systems, Location permission is required to obtain the current WiFi name (SSID), used only for retrieving network information. We do not collect your geographic location data.\n
+        \n
+        4. Foreground Service &amp; Wake Lock Permissions: Used to ensure the Git server remains active when the screen is off or the app is running in the background, preventing connection interruptions.\n
+        \n
+        5. Notification Permission: Used to display service status in the status bar, preventing the background service from being killed by the system.\n
+        \n
+        6. Query Packages Permission: Used on the donation page to detect if other required software is installed.\n
+        \n
+        7. Autostart Permission: Used to automatically start the Git server when the device boots (optional feature).\n
+        \n
+        8. Auto-stop Permission: Used to automatically stop the server when WiFi is disconnected (optional feature).\n
+        \n
+        This app respects user privacy; all data is stored on your local device. As open-source software, you are free to use, study, modify, and distribute this software. Except for necessary network services (allowing other devices to access your Git repositories), we do not upload any personal privacy data.\n
+        \n
+        II. Disclaimer\n
+        The following activities are strictly prohibited:\n
+        \n
+        1. Unauthorized unpacking of the installation package, reverse engineering, modifying application content, forwarding in personal capacity, or additional charging to circumvent copyright protection.\n
+        \n
+        2. Using DroidGit for any illegal activities or violations of local laws and regulations, including but not limited to infringing on others\' intellectual property rights or spreading illegal content.\n
+        \n
+        3. Users should use the Git server functions reasonably and must not abuse the service for malicious attacks, large-scale network bandwidth consumption, or other actions that affect others\' normal use.\n
+        \n
+        4. As DroidGit is a Git server app, users are responsible for ensuring that the content of the hosted code repositories is legal and compliant. Developers are not responsible for the content hosted by users.\n
+        \n
+        5. Users should properly safeguard their account and password information. Developers are not responsible for security issues caused by improper safekeeping by users.\n
+        \n
+        6. Since DroidGit allows network access, users are responsible for ensuring correct network security configurations to avoid risks caused by improper settings.\n
+        \n
+        7. Except as otherwise provided, developers are not liable for the following:\n
+        \n
+        (1) Any impact caused by hacker attacks, computer viruses, technical adjustments by telecommunications departments, temporary shutdowns due to government control, or third-party causes (including force majeure such as failure of international backbone links, fire, flood, lightning, earthquake, typhoon, volcano eruption, plague, strike, war, etc.) and other malicious collection, leakage, loss, theft, or tampering of user personal data not caused by the developer\'s own fault, and any resulting losses to the user and third parties.\n
+        \n
+        (2) You must comply with local laws and regulations and internationally accepted internet conduct standards when using DroidGit. You must not use DroidGit for any activities that violate the principles of peace, respect, and equality, including but not limited to:\n
+        \n
+        (a) Promoting hate speech, discrimination, racism, or violence;\n
+        \n
+        (b) Distributing child sexual abuse material (CSAM), terrorist content, or illegal harassment;\n
+        \n
+        (c) Infringing upon others\' privacy, reputation, or intellectual property rights;\n
+        \n
+        (d) Maliciously compromising network security, spreading malware, or conducting cyberattacks;\n
+        \n
+        (e) Engaging in any activities that violate international human rights conventions.\n
+        \n
+        III. Restriction Terms\n
+        As an open-source Git server application released under the Apache License, Version 2.0, you enjoy the freedom to use, modify, and distribute the software under the terms of the Apache License.\n
+        \n
+        You should comply with local laws and regulations and respect local morals and customs while using DroidGit services. If your behavior violates local laws or customs, you shall be independently liable.\n
+        \n
+        As an open-source software user, you have the right to obtain the source code of this software and can freely use, modify, and distribute this software according to the terms of the Apache License, Version 2.0.\n
+        \n
+        You should avoid involving developers in political and public events through the use of DroidGit services; otherwise, developers have the right to suspend or terminate services to you.\n
+        \n
+        IV. Policy Changes\n
+        You must understand that we will only provide services based on the changed terms of the DroidGit End-User License Agreement (EULA) after you confirm and agree to them. You have the right to refuse the changed agreement, but please be aware that once you refuse, you may not be able to continue using DroidGit services and functions.\n
+        \n
+        If any changes occur, we will notify you and re-obtain your consent before the changes take effect. If you do not agree to the changes, you can choose to stop using our services; if you continue to use our services, it indicates your agreement to be bound by the revised EULA.\n
+        \n
+        V. Intellectual Property\n
+        DroidGit is an open-source Git server application released under the Apache License, Version 2.0, developed and maintained by Olsc. Released under the Apache License, you have the right to use, copy, distribute, and modify this software provided you comply with the license terms.\n
+        \n
+        Main contents of the Apache License, Version 2.0 include:\n
+        \n
+        1. You have the right to use the software for any purpose;\n
+        2. You have the right to study and modify the source code to suit your needs;\n
+        3. You have the right to distribute copies to others;\n
+        4. You have the right to distribute modified versions under the same license terms.\n
+        \n
+        According to Apache License requirements, you must include the original copyright notice and disclaimer in all distributions. See the LICENSE file in the project root for full license terms.\n
+        \n
+        VI. Contact Us\n
+        If you have complaints or reports about network information security, or any questions, comments, or suggestions regarding this EULA and your information, or questions about this statement, please contact us.\n
+        \n
+        This project is an open-source project based on the Apache License, Version 2.0. You can obtain the source code and more contact information via the project homepage. As an open-source software user, you have the right to obtain the complete source code and modify/distribute it according to Apache License terms.\n
+        \n
+        Special Note: This agreement only applies to users of the DroidGit Git server application. The rights of modification and interpretation belong to the developers.\n
+        \n
+        DroidGit Git Server - Host Git repositories anytime, anywhere\n
+        \n
+        Developer: Olsc\n
+        \n
+        Version: DroidGit End-User License Agreement (EULA)\n
+        \n
+        January 2026
+    </string>
+	<string name="updates">Version Updates</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+
+    <string name="activity_settings_label">Settings</string>
+    <string name="activity_repository_details_label">Repository details</string>
+    <string name="activity_setup_label">Repositories</string>
+
+    <string name="notification_channel_name">Git HTTP Service</string>
+    <string name="notification_ticker">Git HTTP server started!</string>
+    <string name="notification_title">Git HTTP server is running</string>
+    <string name="notification_action_restart">Restart</string>
+    <string name="miui_dialog_title">MIUI Background Restrictions</string>
+    <string name="miui_dialog_message">Detected that you are using MIUI system. To keep the Git server running continuously, it is recommended to perform the following settings:\n\n1. Enable \"Auto-start\" permission\n2. Disable \"Battery Saver\" restrictions\n3. \"Lock\" the app in recent tasks\n\nGo to settings now?</string>
+    <string name="miui_dialog_button_settings">Go to Settings</string>
+    <string name="miui_dialog_button_later">Later</string>
+    <string name="miui_dialog_button_dont_show">Don\'t show again</string>
+    <string name="unknown_ssid">unknown</string>
+    <string name="enable_all_files_access_toast">Please enable all files access to create Git repositories</string>
+    <string name="opening_app_toast">Opening %1$s...</string>
+    <string name="app_not_installed_toast">%1$s is not installed.</string>
+    <string name="error_opening_app_toast">Error opening %1$s</string>
+    <string name="imported_repositories_toast">%1$d repositories automatically imported.</string>
+    <string name="error_field_required">Field required</string>
+
+    <string name="splash_subtitle">Git Server for Android</string>
+    <string name="wifi_searching">Searching...</string>
+    <string name="server_log_ready">Server log: Ready...</string>
+    <string name="about_support_title">About and Donate</string>
+    <string name="donate_description">Your support keeps this project alive. Thank you for using DroidGit.</string>
+    <string name="donate_current_maintainer_title">Developer</string>
+    <string name="donate_subscription_description">Support the continuous development and server maintenance.</string>
+    <string name="donate_button_subscription">Support with subscription</string>
+
+    <string name="donate_button_paypal">Donate with PayPal</string>
+    <string name="donate_button_alipay">AliPay</string>
+    <string name="donate_button_wechat">WeChat Pay</string>
+
+    <string name="about_opensource_title">Open Source</string>
+    <string name="about_current_project_label">Project Homepage:</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_repositories">Repositories</string>
+    <string name="menu_scan">Scan repositories</string>
+
+    <string name="server_info_format">Web Console: http://%1$s:%2$s</string>
+    <string name="menu_skip">Skip</string>
+    <string name="dialog_delete_repository_title">Confirm Delete?</string>
+    <string name="dialog_delete_repository_message">Confirm delete %1$s? This will remove its record in DroidGit. Deleting a repository will also permanently delete the actual local repository files.</string>
+
+    <string name="language_settings">Language Settings</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="language_default">System Default</string>
+    <string name="language_en">English (Default)</string>
+    <string name="language_en_us">English (US)</string>
+    <string name="language_zh">中文 (Chinese)</string>
+    <string name="language_ja">日本語 (Japanese)</string>
+    <string name="language_ko">한국어 (Korean)</string>
+    <string name="language_ru">Русский (Russian)</string>
+    <string name="language_fr">Français (French)</string>
+    <string name="language_es">Español (Spanish)</string>
+    <string name="language_ko_kp">조선어 (Korean-KP)</string>
+    <string name="language_it">Italiano (Italian)</string>
+    <string name="language_de">Deutsch (German)</string>
+    <string name="language_ar">العربية (Arabic)</string>
+
+    <string name="error_opening_paypal">Cannot open PayPal</string>
+    <string name="server_running_no_network">Server running - No Network</string>
+    <string name="network_ready_format">Network ready: %s</string>
+    <string name="server_stopped">Server stopped</string>
+    <string name="server_stopped_no_network">Server stopped - No Network</string>
+
+    <string name="error_loading_repositories">Error loading repositories</string>
+    <string name="error_deleting_repository">Error deleting repository</string>
+    <string name="error_updating_repository">Error updating repository</string>
+    <string name="save">Save</string>
+    <string name="repository_updated">Repository updated</string>
+    <string name="repository_created">Repository created</string>
+    <string name="error_occurred">An error occurred: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
+</resources>

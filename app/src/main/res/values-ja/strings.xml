@@ -38,12 +38,12 @@
 	<string name="no_permissions">権限なし</string>
 	<string name="permissions">権限</string>
 	<string name="edit">編集</string>
-	<string name="activate">有効化</string>
-	<string name="deactivate">無効化</string>
+	<string name="activate">公開</string>
+	<string name="deactivate">アーカイブ</string>
 	<string name="delete">削除</string>
 	<string name="repository_details">リポジトリ詳細</string>
 	<string name="no_users">ユーザーなし</string>
-	<string name="add_repository_activate">リポジトリを有効化</string>
+	<string name="add_repository_activate">公開</string>
 	<string name="server_settings">サーバー設定</string>
 	<string name="general_settings">一般設定</string>
 	<string name="eula">
@@ -201,13 +201,18 @@
     <string name="language_settings">言語設定</string>
     <string name="choose_language">言語を選択</string>
     <string name="language_default">システムデフォルト</string>
-    <string name="language_en">英語 (English)</string>
+    <string name="language_en">英語 (Default)</string>
+    <string name="language_en_us">英語 (US)</string>
     <string name="language_zh">中国語 (Chinese)</string>
     <string name="language_ja">日本語</string>
     <string name="language_ko">韓国語 (Korean)</string>
     <string name="language_ru">ロシア語 (Russian)</string>
     <string name="language_fr">フランス語 (French)</string>
     <string name="language_es">スペイン語 (Spanish)</string>
+    <string name="language_ko_kp">韓国語 (Korean-KP)</string>
+    <string name="language_it">イタリア語 (Italian)</string>
+    <string name="language_de">ドイツ語 (German)</string>
+    <string name="language_ar">アラビア語 (Arabic)</string>
 
     <string name="error_opening_paypal">PayPal を開けません</string>
     <string name="server_running_no_network">サーバー実行中 - ネットワークなし</string>
@@ -222,4 +227,36 @@
     <string name="repository_updated">リポジトリを更新しました</string>
     <string name="repository_created">リポジトリを作成しました</string>
     <string name="error_occurred">エラーが発生しました: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>

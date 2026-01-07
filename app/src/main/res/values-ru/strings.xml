@@ -38,12 +38,12 @@
 	<string name="no_permissions">Нет разрешений</string>
 	<string name="permissions">Разрешения</string>
 	<string name="edit">Изменить</string>
-	<string name="activate">Активировать</string>
-	<string name="deactivate">Отключить</string>
+	<string name="activate">Публичный</string>
+	<string name="deactivate">Архив</string>
 	<string name="delete">Удалить</string>
 	<string name="repository_details">Детали репозитория</string>
 	<string name="no_users">Нет пользователей</string>
-	<string name="add_repository_activate">Активировать репозиторий</string>
+	<string name="add_repository_activate">Публичный</string>
 	<string name="server_settings">Настройки сервера</string>
 	<string name="general_settings">Общие настройки</string>
 	<string name="eula">
@@ -201,13 +201,18 @@
     <string name="language_settings">Настройки языка</string>
     <string name="choose_language">Выбрать язык</string>
     <string name="language_default">Системный по умолчанию</string>
-    <string name="language_en">Английский (English)</string>
+    <string name="language_en">Английский (Default)</string>
+    <string name="language_en_us">Английский (US)</string>
     <string name="language_zh">Китайский (Chinese)</string>
     <string name="language_ja">Японский (Japanese)</string>
     <string name="language_ko">Корейский (Korean)</string>
     <string name="language_ru">Русский</string>
     <string name="language_fr">Французский (French)</string>
     <string name="language_es">Испанский (Spanish)</string>
+    <string name="language_ko_kp">Корейский (Korean-KP)</string>
+    <string name="language_it">Итальянский (Italian)</string>
+    <string name="language_de">Немецкий (German)</string>
+    <string name="language_ar">Арабский (Arabic)</string>
 
     <string name="error_opening_paypal">Не удалось открыть PayPal</string>
     <string name="server_running_no_network">Сервер запущен - Нет сети</string>
@@ -221,4 +226,36 @@
     <string name="repository_updated">Репозиторий обновлен</string>
     <string name="repository_created">Репозиторий создан</string>
     <string name="error_occurred">Произошла ошибка: %1$s</string>
+
+    <string-array name="language_entries">
+        <item>@string/language_default</item>
+        <item>@string/language_en</item>
+        <item>@string/language_en_us</item>
+        <item>@string/language_zh</item>
+        <item>@string/language_ja</item>
+        <item>@string/language_ko</item>
+        <item>@string/language_ru</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_es</item>
+        <item>@string/language_ko_kp</item>
+        <item>@string/language_it</item>
+        <item>@string/language_de</item>
+        <item>@string/language_ar</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>en-rUS</item>
+        <item>zh</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ko-rKP</item>
+        <item>it</item>
+        <item>de</item>
+        <item>ar</item>
+    </string-array>
 </resources>
