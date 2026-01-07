@@ -9,9 +9,9 @@ Accessible via **HTTP**, DroidGit makes it easy to share code and collaborate on
 
 [English](https://github.com/Olsc/DroidGit/blob/master/README.md) | [中文](https://github.com/Olsc/DroidGit/blob/master/docs/README_zh.md)
 
-![DroidGit Preview](https://github.com/Olsc/DroidGit/blob/master/docs/image_1.jpg)
+![DroidGit Preview](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_1.jpg)
 
-![DroidGit Screenshot](https://github.com/Olsc/DroidGit/blob/master/docs/image_2.jpg)
+![DroidGit Screenshot](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_2.jpg)
 
 ---
 

@@ -7,11 +7,11 @@
 DroidGit 支持 **HTTP** 协议，让您随时随地轻松共享代码和协同工作。(注意：目前仅支持 HTTP 协议，SSH 支持可能会在未来版本中添加)
 
 
-[English](https://github.com/Olsc/DroidGit/blob/master/README.md) | [中文](https://github.com/Olsc/DroidGit/blob/master/docs/README_zh.md)
+[English](../README.md) | [中文](README_zh.md) | [Español](README_es.md) | [Français](README_fr.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Русский](README_ru.md)
 
-![DroidGit 预览](https://github.com/Olsc/DroidGit/blob/master/docs/image_1.jpg)
+![DroidGit 预览](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_1.jpg)
 
-![DroidGit 截图](https://github.com/Olsc/DroidGit/blob/master/docs/image_2.jpg)
+![DroidGit 截图](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_2.jpg)
 
 ---
 
@@ -76,7 +76,7 @@ git push -u origin master
 ## 🛡️ 许可协议与最终用户协议 (EULA)
 
 ### 开源许可证
-本项目采用 **Apache License, Version 2.0** 许可证。您可以根据 Apache 许可证条款自由使用、修改和分发本软件。详情请参阅 [LICENSE](LICENSE)。
+本项目采用 **Apache License, Version 2.0** 许可证。您可以根据 Apache 许可证条款自由使用、修改和分发本软件。详情请参阅 [LICENSE](../LICENSE)。
 
 ### 最终用户许可协议 (EULA)
 DroidGit 遵循 **和平、尊重和平等** 的国际原则。
