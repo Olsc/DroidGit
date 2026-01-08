@@ -6,7 +6,7 @@
 
 **HTTP**를 통해 액세스 가능한 DroidGit은 이동 중에도 간편하게 코드를 공유하고 협업할 수 있도록 합니다. (참고: 현재 HTTP 프로토콜만 지원되며, SSH 지원은 향후 버전에서 추가될 수 있습니다.)
 
-[English](https://github.com/ZUXTUO/DroidGit/blob/main/README.md) | [中文](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_zh.md) | [Español](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_es.md) | [Français](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_fr.md) | [日本語](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ja.md) | [한국어](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ko.md) | [Русский](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ru.md)
+[English](https://github.com/Olsc/DroidGit/blob/main/README.md) | [中文](https://github.com/Olsc/DroidGit/blob/main/docs/README_zh.md) | [Español](https://github.com/Olsc/DroidGit/blob/main/docs/README_es.md) | [Français](https://github.com/Olsc/DroidGit/blob/main/docs/README_fr.md) | [日本語](https://github.com/Olsc/DroidGit/blob/main/docs/README_ja.md) | [한국어](https://github.com/Olsc/DroidGit/blob/main/docs/README_ko.md) | [Русский](https://github.com/Olsc/DroidGit/blob/main/docs/README_ru.md)
 
 ![DroidGit Preview](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_1.jpg)
 
