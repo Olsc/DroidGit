@@ -6,7 +6,7 @@
 
 Доступный через **HTTP**, DroidGit упрощает обмен кодом и совместную работу в пути. (Примечание: на данный момент поддерживается только протокол HTTP, поддержка SSH может быть добавлена в будущих версиях)
 
-[English](../README.md) | [中文](README_zh.md) | [Español](README_es.md) | [Français](README_fr.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Русский](README_ru.md)
+[English](https://github.com/ZUXTUO/DroidGit/blob/main/README.md) | [中文](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_zh.md) | [Español](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_es.md) | [Français](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_fr.md) | [日本語](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ja.md) | [한국어](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ko.md) | [Русский](https://github.com/ZUXTUO/DroidGit/blob/main/docs/README_ru.md)
 
 ![DroidGit Preview](https://raw.githubusercontent.com/Olsc/DroidGit/refs/heads/main/docs/image_1.jpg)
 
