@@ -92,3 +92,9 @@ DroidGit は、**平和、尊重、平等** の国際原則を遵守します。
 - **データベース**: ORMLite (SQLite).
 
 ---
+<br>
+<br>
+
+# ♥ コントリビューターリスト
+
+[![コントリビューターリスト](https://contrib.rocks/image?repo=Olsc/DroidGit)](https://github.com/Olsc/DroidGit/graphs/contributors)

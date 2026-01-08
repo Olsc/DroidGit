@@ -92,3 +92,9 @@ DroidGit придерживается международных принцип�
 - **База данных**: ORMLite (SQLite).
 
 ---
+<br>
+<br>
+
+# ♥ Список участников
+
+[![Список участников](https://contrib.rocks/image?repo=Olsc/DroidGit)](https://github.com/Olsc/DroidGit/graphs/contributors)

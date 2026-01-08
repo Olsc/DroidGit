@@ -93,3 +93,9 @@ By using this software, you agree to:
 - **Database**: ORMLite (SQLite).
 
 ---
+<br>
+<br>
+
+# ♥ Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=Olsc/DroidGit)](https://github.com/Olsc/DroidGit/graphs/contributors)
