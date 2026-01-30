@@ -20,7 +20,6 @@ Accessible via **HTTP**, DroidGit makes it easy to share code and collaborate on
 ### 🚀 Core Functionality
 - **HTTP Protocol Support**: Host Git repositories using **Smart HTTP** protocol.
 - **Git Operations**: Full support for standard Git commands: `clone`, `push`, `pull`, `fetch`.
-- **User Management**: Create multiple users with dedicated passwords and permissions.
 - **Repository Management**: Create, delete, and edit repositories via the Android App or Web Console.
 
 ### 🌐 Web Management Console

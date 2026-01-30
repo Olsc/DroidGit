@@ -19,7 +19,6 @@ Accessible via **HTTP**, DroidGit facilite le partage de code et la collaboratio
 ### 🚀 Fonctionnalités de Base
 - **Support du Protocole HTTP** : Hébergez des dépôts Git en utilisant le protocole **Smart HTTP**.
 - **Opérations Git** : Support complet des commandes Git standard : `clone`, `push`, `pull`, `fetch`.
-- **Gestion des Utilisateurs** : Créez plusieurs utilisateurs avec des mots de passe et des permissions dédiés.
 - **Gestion des Dépôts** : Créez, supprimez et modifiez des dépôts via l'application Android ou la console Web.
 
 ### 🌐 Console de Gestion Web
