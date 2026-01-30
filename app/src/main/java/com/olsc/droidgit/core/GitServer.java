@@ -570,6 +570,49 @@ public class GitServer extends NanoHTTPD {
                 "        const lang = navigator.language.startsWith('zh') ? 'zh' : 'en';\n" +
                 "        const t = i18n[lang];\n" +
                 "\n" +
+                "        function showToast(msg) {\n" +
+                "            const toast = document.createElement('div');\n" +
+                "            toast.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--bg);padding:8px 16px;border-radius:20px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:9999;transition:opacity 0.3s;pointer-events:none;';\n" +
+                "            toast.innerText = msg;\n" +
+                "            document.body.appendChild(toast);\n" +
+                "            setTimeout(() => {\n" +
+                "                toast.style.opacity = '0';\n" +
+                "                setTimeout(() => document.body.removeChild(toast), 300);\n" +
+                "            }, 2000);\n" +
+                "        }\n" +
+                "\n" +
+                "        function copyToClipboard(text) {\n" +
+                "            const successMsg = lang === 'zh' ? '已复制: ' : 'Copied: ';\n" +
+                "            if (navigator.clipboard && navigator.clipboard.writeText) {\n" +
+                "                navigator.clipboard.writeText(text).then(() => {\n" +
+                "                    showToast(successMsg + text);\n" +
+                "                }).catch(err => {\n" +
+                "                    fallbackCopy(text);\n" +
+                "                });\n" +
+                "            } else {\n" +
+                "                fallbackCopy(text);\n" +
+                "            }\n" +
+                "        }\n" +
+                "\n" +
+                "        function fallbackCopy(text) {\n" +
+                "            const successMsg = lang === 'zh' ? '已复制: ' : 'Copied: ';\n" +
+                "            const textArea = document.createElement(\"textarea\");\n" +
+                "            textArea.value = text;\n" +
+                "            textArea.style.position = \"fixed\";\n" +
+                "            textArea.style.opacity = \"0\";\n" +
+                "            document.body.appendChild(textArea);\n" +
+                "            textArea.focus();\n" +
+                "            textArea.select();\n" +
+                "            try {\n" +
+                "                document.execCommand('copy');\n" +
+                "                showToast(successMsg + text);\n" +
+                "            } catch (err) {\n" +
+                "                console.error('Copy failed', err);\n" +
+                "                alert('Failed to copy / 复制失败');\n" +
+                "            }\n" +
+                "            document.body.removeChild(textArea);\n" +
+                "        }\n" +
+                "\n" +
                 "\n" +
                 "        document.title = t.header;\n" +
                 "        document.getElementById('header-title').innerText = t.header;\n" +
@@ -664,7 +707,7 @@ public class GitServer extends NanoHTTPD {
                 "                            <div style=\"color:var(--text-dim);font-size:0.9em;margin-top:4px;margin-bottom:8px;\">${repo.description || ''}</div>\n"
                 +
                 "                            <div style=\"${repo.archived ? 'display:none;' : ''}\">\n" +
-                "                                <span class=\"ssh-url\">http://${location.host}/${mappingUrl}</span>\n"
+                "                                <span class=\"ssh-url\" onclick=\"copyToClipboard(this.innerText)\" style=\"cursor:pointer\" title=\"Click to copy\">http://${location.host}/${mappingUrl}</span>\n"
                 +
                 "                            </div>\n" +
                 "                        </div>\n" +
