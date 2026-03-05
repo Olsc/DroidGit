@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        agp_version = '9.0.0'
+        agp_version = '9.1.0'
     }
     repositories {
         google()
@@ -12,9 +12,9 @@ buildscript {
     configurations.classpath {
         resolutionStrategy {
             force 'org.jdom:jdom2:2.0.6.1'
-            force 'io.netty:netty-codec-http2:4.2.9.Final'
-            force 'io.netty:netty-handler:4.2.9.Final'
-            force 'io.netty:netty-codec:4.2.9.Final'
+            force 'io.netty:netty-codec-http2:4.2.10.Final'
+            force 'io.netty:netty-handler:4.2.10.Final'
+            force 'io.netty:netty-codec:4.2.10.Final'
             force 'org.apache.commons:commons-compress:1.28.0'
         }
     }
