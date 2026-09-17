@@ -41,7 +41,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'com.google.android.material:material:1.14.0'
     implementation 'com.j256.ormlite:ormlite-android:6.1'
-    implementation 'org.eclipse.jgit:org.eclipse.jgit:7.7.1.202607240634-r'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:7.8.0.202609011348-r'
     implementation 'commons-validator:commons-validator:1.11.0'
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0'
